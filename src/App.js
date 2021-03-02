@@ -4,6 +4,7 @@ import Sidebar from '../src/component/Sidebar';
 import Home from '../src/component/Home';
 import Profile from '../src/component/Profile';
 import Resume from '../src/component/Resume';
+import Portofolio from '../src/component/Portofolio';
 import Contact from '../src/component/Contact';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -24,11 +25,12 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <Sidebar />
-      <Home />
-      <Profile />
-      <Resume />
-      <Contact />
+      <Sidebar/>
+      <Home/>
+      <Profile/>
+      <Resume/>
+      <Portofolio/>
+      <Contact/>
       {/* <div name='skills' style={{backgroundColor: 'red',height: '100vh', padding: '20vh'}}>
         <div data-aos="fade-up" style={{backgroundColor: 'white', height: '300px', width: '50%'}}  />
       </div> */}

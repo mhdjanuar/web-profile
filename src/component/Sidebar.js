@@ -9,7 +9,9 @@ import Divider from '@material-ui/core/Divider';
 import HomeIcon from '@material-ui/icons/Home';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import MenuIcon from '@material-ui/icons/Menu';
+import MenuBook from '@material-ui/icons/LibraryBooks';
 import DescriptionIcon from '@material-ui/icons/Description';
+import Contacts from '@material-ui/icons/Email';
 import { Link } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
@@ -97,7 +99,7 @@ const Sidebar = () => {
                 <ListItemIcon className="listItemIcon" style={{minWidth: 0}}>
                     {props.icon}
                 </ListItemIcon>
-                <ListItemText style={{paddingLeft: 15}} primary={props.name} />
+                <ListItemText style={{paddingLeft: 5}} primary={props.name} />
           </ListItem>
         </Link>
     );
@@ -139,12 +141,20 @@ const Sidebar = () => {
             icon={<DescriptionIcon />}
           />
           <LinkWithListItem 
+            to='portofolio' 
+            name='Portofolio'
+            onClick={() => {
+              setDrawerOpen(!drawerOpen)
+            }}
+            icon={<MenuBook />}
+          />
+          <LinkWithListItem 
             to='contact' 
             name='Contact'
             onClick={() => {
               setDrawerOpen(!drawerOpen)
             }}
-            icon={<DescriptionIcon />}
+            icon={<Contacts />}
           />
         </List>
     </Drawer>
